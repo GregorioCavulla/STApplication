@@ -1,6 +1,7 @@
 package application;
 
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * @author ghigo
@@ -12,6 +13,7 @@ public class Oggetto {
 	public String descrizione;
 	public String magazzino;
 	public String categoria;
+	public Optional<Attributo> attributo;
 
 	/**
 	 * @param codice
@@ -67,6 +69,11 @@ public class Oggetto {
 	 */
 	public String getCategoria() {
 		return categoria;
+	}
+	
+	public boolean aggiungiAttributo(Attributo attributo) {
+		this.attributo = Optional.ofNullable(attributo);
+		return true;
 	}
 
 	@Override

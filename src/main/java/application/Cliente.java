@@ -11,7 +11,7 @@ public class Cliente {
 
 	ArrayList<Oggetto> materiale;
 	String descrizione;
-	
+
 	/**
 	 * @param descrizione
 	 */
@@ -72,6 +72,5 @@ public class Cliente {
 		Cliente other = (Cliente) obj;
 		return Objects.equals(descrizione, other.descrizione) && Objects.equals(materiale, other.materiale);
 	}
-	
-	
+
 }
