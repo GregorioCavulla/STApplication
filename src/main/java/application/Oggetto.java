@@ -2,6 +2,10 @@ package application;
 
 import java.util.Objects;
 
+/**
+ * @author ghigo
+ *
+ */
 public class Oggetto {
 
 	public String codice;

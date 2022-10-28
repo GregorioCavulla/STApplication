@@ -1,9 +1,7 @@
-/**
- * 
- */
 package application;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author ghigo
@@ -85,5 +83,24 @@ public class Magazzino {
 			return false;
 		}
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(descrizione, oggetti);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Magazzino other = (Magazzino) obj;
+		return Objects.equals(descrizione, other.descrizione) && Objects.equals(oggetti, other.oggetti);
+	}
+	
+	
 
 }
